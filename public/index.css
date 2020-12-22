@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", arial;
+}
+
+:root {
+  --violet: #7100ff;
+  --green: #00ffb4;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100vh;
+  width: 100%;
+}
+
+.create-room {
+  transition: 175ms;
+  background-color: var(--violet);
+  color: white;
+  font-weight: bold;
+  width: 170px;
+  height: 45px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+}
+
+.create-room:hover {
+  transform: scale(1.05) translate(-50%, -50%);
+}
+
+.create-room::after {
+  transition: 200ms;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+.create-room:active::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}

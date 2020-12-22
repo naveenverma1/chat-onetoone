@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js" ></script>
+    <link rel="stylesheet" href="room.css">
+    <script src="room.js" defer></script>
+    <title>Room - Chat App</title>
+</head>
+<body>
+    <div class="chat-area">
+        <div class="messages">
+            <div class="active-typers"></div>
+        </div>
+        <form class="text-controls">
+            <input type="text" placeholder="Display Name" class="display_name">
+            <div class="message-controls">
+                <input type="text" placeholder="Type a Message..." class="message">
+                <input type="submit" class="send_button" value="Send">
+            </div>
+        </form>
+    </div>
+    <script>
+        const USERID = "<%=userId%>";
+        const ROOMID = "<%=roomId%>";
+    </script>
+</body>
+</html>
